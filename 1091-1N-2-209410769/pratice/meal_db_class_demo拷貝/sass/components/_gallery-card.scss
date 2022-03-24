@@ -1,0 +1,64 @@
+.gallery {
+    max-width: 90%;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    //使用auto-fit讓grid自己感應螢幕大小
+    grid-template-columns: repeat(auto-fit, minmax(20rem, .3fr));
+    grid-auto-rows: 20rem;
+    gap: 1rem;
+}
+
+.gallery-card {
+    overflow: hidden;
+    border-radius: $radius;
+    cursor: pointer;
+    position: relative;
+    box-shadow: .5rem .5rem .5rem rgba(0,0,0,.1);
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 250ms ease-out;
+    }
+
+    &__details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba($clr-gray100, .5);
+        backdrop-filter: blur(2px) brightness(1.1);
+        padding: 0.5rem;
+        opacity: 0;
+        transition: opacity 350ms;
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            color: $clr-gray100;
+            text-shadow: 0 0 .8rem $clr-gray700;
+            position: relative;
+            top: 2rem;
+            transition: top 350ms;
+        }
+    }
+
+    &:hover &__img {
+        transform: scale(1.1);
+    }
+
+    &:hover &__details {
+        opacity: 1;
+    }
+
+    &:hover &__details h2 {
+        top: 0;
+    }
+}

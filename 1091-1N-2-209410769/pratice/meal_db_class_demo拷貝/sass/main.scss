@@ -1,0 +1,12 @@
+// 整合時此處無需複製
+
+@import "./abstracts/variable.scss";
+@import "./abstracts/flex.scss";
+@import "./abstracts/typography";
+
+@import "./base/base.scss";
+
+@import "./layout/container";
+
+@import "./components/gallery-card.scss";
+@import "./components/buttons.scss";

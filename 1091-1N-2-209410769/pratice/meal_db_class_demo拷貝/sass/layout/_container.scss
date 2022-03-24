@@ -1,0 +1,15 @@
+.container {
+    margin: auto;
+    max-width: 120rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5rem;
+
+    h1 {
+        color: white;
+        margin-bottom: 1rem;
+    }
+}
